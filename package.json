@@ -1,0 +1,20 @@
+{
+  "name": "frontend-tests",
+  "version": "0.0.1",
+  "description": "Front end tests",
+  "main": "index.js",
+  "keywords": [
+    "Front",
+    "end",
+    "tests",
+    "acceptance",
+    "PhantomJS",
+    "CasperJS"
+  ],
+  "author": "Adam Foster",
+  "license": "ISC",
+  "devDependencies": {
+    "casperjs": "^1.1.0-beta3",
+    "phantomjs": "^1.9.7-5"
+  }
+}
