@@ -1,8 +1,9 @@
 // wotiftesting.js
-casper.test.begin('Wotif search retrieves 700 or more results', 2, function suite(test) {
+casper.test.begin('Wotif search retrieves 100 or more results', 3, function suite(test) {
     casper.start("http://www.wotif.com/search/results?country=NZ&region=20016&startDay=2014-05-20&adults=2&children=0&formSearch=true&page=1&viewType=all", function() {
-        this.test.assertTitle("Wotif.com: Queenstown hotels, accommodation, motels, serviced apartments, B&B - Online hotel bookings with instant confirmation - select your hotel at Wotif.com");
-        test.assertExists('select#country optgroup option', "Select country is New Zealand");
+        test.assertTitle("Wotif.com: Queenstown hotels, accommodation, motels, serviced apartments, B&B - Online hotel bookings with instant confirmation - select your hotel at Wotif.com");
+        test.assertExists('select#country optgroup option', 'Selector exists');
+        test.assertSelectorHasText('select#country optgroup option', 'New Zealand');
         // this.fill('form[action="/search"]', {
         //     q: "casperjs"
         // }, true);
